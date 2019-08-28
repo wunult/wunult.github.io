@@ -1,170 +1,808 @@
 <!DOCTYPE html>
-<html>
-  <!-- Html Head Tag-->
-  <head><meta name="generator" content="Hexo 3.9.0">
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content>
-  <meta name="author" content="Nult_Wu">
-  <!-- Open Graph Data -->
-  <meta property="og:title" content="bitch_wu">
-  <meta property="og:description" content="吴雨旗的个人博客,主要就是日常的自学情况">
-  <meta property="og:site_name" content="bitch_wu">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://wunult.github.io">
-  
-    <link rel="alternate" href="/atom.xml" title="bitch_wu" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
+<html lang="en">
 
-  <!-- Site Title -->
-  <title>bitch_wu</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AigoHunt</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./font_colyq0z9y0a/iconfont.css">
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="/css/bootstrap.min.css">
-  <!-- Custom CSS -->
-  
-  <link rel="stylesheet" href="/css/style.light.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="./jquery/瀑布流/css/animate.css">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="./jquery/瀑布流/css/magnific-popup.css">
+    <!-- Salvattore -->
+    <link rel="stylesheet" href="./jquery/瀑布流/css/salvattore.css">
+    <!-- Theme Style -->
+    <!-- Modernizr JS -->
+    <script src="./jquery/瀑布流/js/modernizr-2.6.2.min.js"></script>
+    <link rel="stylesheet" href="./font_jver6jt451/iconfont.css">
 
-  <!-- Google Analytics -->
-  
+    <link href="./css/bootstrap.css" rel="stylesheet">
+    <link href="./css/bootstrap-responsive.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/default.css">
+    <link href="./css/gridex.css" rel="stylesheet">
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            outline: none;
+        }
+
+        .bo {
+            border: 1px solid red;
+        }
+
+        input,
+        button,
+        select,
+        textarea {
+            outline: none;
+        }
+
+        body,
+        html {
+            font-family: Helvetica, Tahoma, Arial, "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei";
+            font-family: Helvetica, Tahoma, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei";
+        }
+
+        .ihover:hover {
+            color: blueviolet;
+        }
+
+        .nul li {
+            margin: 0 10px;
+        }
+
+        .fbold {
+            font-weight: bold;
+        }
+
+        .cinput {
+            outline-color: invert;
+            outline-style: none;
+            outline-width: 0px;
+            border: none;
+            border-style: none;
+            text-shadow: none;
+            -webkit-appearance: none;
+            -webkit-user-select: text;
+            outline-color: transparent;
+            box-shadow: none;
+        }
+
+        .cinput:focus,
+        .cinput:active:focus,
+        .cinput.active:focus,
+        .cinput.focus,
+        .cinput:active.focus,
+        .cinput.active.focus {
+            outline: none;
+            box-shadow: none;
+            background: #fff;
+            color: black;
+        }
+
+        .cinput.active.focus,
+        .jumpnext {
+            border-bottom: 1px solid #aaa;
+        }
+
+        input::-webkit-input-placeholder {
+            font-size: 26px;
+            font-weight: lighter;
+            text-indent: 6px;
+        }
+
+        input:-moz-placeholder {
+            font-size: 26px;
+            font-weight: lighter;
+            text-indent: 6px;
+        }
+
+        input::-moz-placeholder {
+            font-size: 26px;
+            font-weight: lighter;
+            text-indent: 6px;
+        }
+
+        input:-ms-input-placeholder {
+            font-size: 26px;
+            font-weight: lighter;
+            text-indent: 6px;
+        }
+
+        .divForm {
+
+            position: absolute;
+            /*绝对定位*/
+
+            width: 984px;
+
+            height: 200px;
+
+            text-align: center;
+            /*(让div中的内容居中)*/
+
+            top: 50%;
+
+            left: 50%;
+
+            margin-top: -200px;
+
+            margin-left: -477px;
+
+        }
+
+        .content {
+            display: none;
+        }
+
+        .image_content {
+            width: 100px;
+            display: none;
+        }
+
+        .image_content img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .main_center {
+            width: 960px;
+            height: 210px;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+
+        .main_center>.row>div {
+            width: 320px;
+            height: 210px;
+            border-left: 1px solid #bbbbbb;
+        }
+
+        .main_center>.row>div:nth-child(1) {
+            border-left: none;
+        }
+
+        .topbar {
+            display: none;
+        }
+
+        #footer {
+            margin-top: 20px;
+            height: 300px;
+            background: blueviolet;
+            display: none;
+        }
+
+        .foot-content>div>div {
+            height: 54px;
+            line-height: 54px;
+            margin: 10px 0;
+            /* border: 1px solid red; */
+        }
+
+        .foot-content img {
+            height: 100px;
+            width: 170px;
+        }
+
+        .icon {
+            width: 36px;
+            height: 36px;
+            line-height: 36px;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+
+        .copyright {
+            margin-bottom: 20px;
+        }
+
+        .copyrights {
+            font-size: 12px;
+            text-align: center;
+        }
+
+        .copyrights a {
+            text-decoration: none;
+            outline: none;
+            color: black;
+            cursor: pointer;
+        }
+
+        .main-content {
+            margin-top: 40px;
+        }
+
+        a:focus {
+            outline: none;
+        }
+
+        x .wrapper {
+            min-height: 100%;
+            height: auto !important;
+            height: 100%;
+            margin: 0 auto -120px;
+        }
+
+        .push {
+            height: 120px;
+        }
+
+        .htmleaf-container{
+            display:none;
+        }
+        .span3 img{
+            width: 265px;
+        }
+    </style>
+
 
 </head>
 
-  <body>
-    <!-- Page Header -->
+<body>
 
+    <div class="container-fluid">
 
-<header class="site-header header-background" style="background-image: url(/img/default-banner-dark.jpg)">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <div class="page-title with-background-image">
-          <p class="title">bitch_wu</p>
-          <p class="subtitle">wuyuqi</p>
+        <div class="row navtopbar" style="padding:30px 0;">
+
+            <div class="col-md-4">
+                <ul class="nav nav-pills nul" style="font-size: 26px;margin-left: 20px;">
+                    <li class="fbold">
+                        <i class="iconfont icon-iconfontzhizuobiaozhun0247" style="font-size: 26px;"></i>
+                    </li>
+                    <li class="fbold" style="margin-left: 10px;">
+                        AIGOHUNT
+                    </li>
+                    <li class="ihover" style="font-size: 14px;padding-top: 12px;cursor: pointer;">
+                        为什么选择AIGIHUNT?
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+                <div class="pull-right" style="margin-right: 20px;">
+                    <a href="login.html" style="color: black;text-decoration: none;font-size: 26px;margin-right: 20px;">
+                        <i class="iconfont icon-xiaoxi ihover"
+                            style="font-size: 26px;font-weight: bold;margin-left: 10px;"></i>
+                        <i class="iconfont icon-wode ihover"
+                            style="font-size: 26px;font-weight: bold;margin-left: 10px;"></i>
+
+                    </a>
+                </div>
+            </div>
+
         </div>
-        <div class="site-menu with-background-image">
-          <ul>
-            
-              <li>
-                <a href="/">
-                  
-                  Home
-                  
-                </a>
-              </li>
-            
-              <li>
-                <a href="/archives">
-                  
-                  Archives
-                  
-                </a>
-              </li>
-            
-              <li>
-                <a href="https://github.com/<your-github-username>">
-                  
-                  Github
-                  
-                </a>
-              </li>
-            
-              <li>
-                <a href="mailto:<your-email-address>">
-                  
-                  Email
-                  
-                </a>
-              </li>
-            
-          </ul>
+
+        <div class="divForm ">
+
+            <form action="https://www.baidu.com" method="post">
+
+                <label class="sr-only" for="exampleInputAmount"> </label>
+                <ul class="Divform_Ul" style="list-style: none;">
+                    <li class="fbold" style="font-size: 36px;margin-top:10px;">展示您的作品</li>
+                    <li class="fbold" style="font-size: 36px;margin-top:10px;">找到适合您的新灵感</li>
+                    <li style="font-size: 14px; margin:10px 0;">由全球社区创建的超过200000+个矢量创意图形</li>
+                </ul>
+
+                <div class="input-group jumpnext">
+                    <input name='wd' size="40" autofocus="autofocus" onkeydown="jump()"
+                        style="height: 56px;font-size: 26px;" type="text" class="cinput form-control"
+                        placeholder="试试免费HUNT“消防”">
+                    <div class="input-group-addon inputsearch" style="background-color: #fff;border:none;">
+                        <a href="./jquery/瀑布流/index.html" style="text-decoration: none;">
+                            <i class="iconfont icon-sousuo"
+                                style="color: #B3B3B3;font-weight: bolder;font-size: 24px;"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </form>
+            <div class="main_center">
+
+                <div class="row foot-content">
+                    <div class="col-md-4">
+                        <div class="col-md-12">
+                            <div class="col-md-4">
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-AI"></use>
+                                </svg>
+                            </div>
+                            <div class="col-md-4">
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-Ps"></use>
+                                </svg>
+                            </div>
+                            <div class="col-md-4">
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-Id"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="col-md-4">
+
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-word"></use>
+                                </svg>
+                            </div>
+                            <div class="col-md-4">
+
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-ppt"></use>
+                                </svg>
+                            </div>
+                            <div class="col-md-4">
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-pdf"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="col-md-12" style="line-height: 40px;">
+                            <span style="display: block;height: 20px;">通过多关键词免费搜索</span>
+                            <span style="display: block;height: 20px;">在工作流程中获取图形</span>
+
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="col-md-12" style="height: 108px;">
+                            <img src="./other/资源-2_0000_图层-2.png" alt="" style="margin: 6px 0;">
+                        </div>
+                        <div class="col-md-12" style="line-height: 40px;margin-top: 30px;">
+
+                            <span style="display: block;height: 20px;">现在，您可以购买包年服务，</span>
+
+                            <span style="display: block;height: 20px;">获得您可以随时使用的图形。</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="col-md-12" style="height: 108px;">
+                            <img src="./other/资源-2_0001_图层-3.png" alt="" style="margin: 6px 0;">
+                        </div>
+                        <div class="col-md-12" style="line-height: 40px;margin-top: 30px;">
+
+                            <span style="display: block;height: 20px;">通过添加搜索词来上传您的图形</span>
+
+                            <span style="display: block;height: 20px;">获得共享分成或利润分成</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
-      </div>
+
+        <!-- <div id="fh5co-main" style="margin-top:50px;">
+            <div class="container">
+
+                <div class="row">
+
+                    <div id="fh5co-board" data-columns>
+
+                        <div class="row main-content">
+                            <div class="col-lg-12">
+                                <div class="col-md-2">
+
+                                    <div class="iframe-wrap">
+                                        <div class="animate-box">
+                                            <a href="./images/网站_画板-1_03.jpg" class="image-popup fh5co-board-img"
+                                                title="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, eos?"><img
+                                                    src="./images/logo/ailogohunt00001.svg"
+                                                    alt="Free HTML5 Bootstrap template"></a>
+                                        </div>
+                                        <div class="fh5co-desc">Lorem ipsum dolor sit amet, consectetur adipisicing
+                                            elit. Explicabo,
+                                            eos?
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="iframe-wrap">
+
+                                        <div class="animate-box">
+                                            <a href="./images/网站_画板-1_05.jpg" class="image-popup fh5co-board-img"
+                                                title="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, eos?"><img
+                                                    src="./images/logo/ailogohunt00001.svg"
+                                                    alt="Free HTML5 Bootstrap template"></a>
+                                        </div>
+
+                                        <div class="fh5co-desc">Lorem ipsum dolor sit amet, consectetur adipisicing
+                                            elit. Explicabo,
+                                            eos?
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="iframe-wrap">
+
+                                        <div class="animate-box">
+                                            <a href="./images/网站_画板-1_05.jpg" class="image-popup fh5co-board-img"
+                                                title="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, eos?"><img
+                                                    src="./images/logo/ailogohunt00001.svg"
+                                                    alt="Free HTML5 Bootstrap template"></a>
+                                        </div>
+
+                                        <div class="fh5co-desc">Lorem ipsum dolor sit amet, consectetur adipisicing
+                                            elit. Explicabo,
+                                            eos?
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="iframe-wrap">
+
+                                        <div class="animate-box">
+                                            <a href="./images/网站_画板-1_05.jpg" class="image-popup fh5co-board-img"
+                                                title="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, eos?"><img
+                                                    src="./images/logo/ailogohunt00001.svg"
+                                                    alt="Free HTML5 Bootstrap template"></a>
+                                        </div>
+
+                                        <div class="fh5co-desc">Lorem ipsum dolor sit amet, consectetur adipisicing
+                                            elit. Explicabo,
+                                            eos?
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="iframe-wrap">
+
+                                        <div class="animate-box">
+                                            <a href="./images/网站_画板-1_05.jpg" class="image-popup fh5co-board-img"
+                                                title="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, eos?"><img
+                                                    src="./images/logo/ailogohunt00001.svg"
+                                                    alt="Free HTML5 Bootstrap template"></a>
+                                        </div>
+
+                                        <div class="fh5co-desc">Lorem ipsum dolor sit amet, consectetur adipisicing
+                                            elit. Explicabo,
+                                            eos?
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="iframe-wrap">
+
+                                        <div class="animate-box">
+                                            <a href="./images/网站_画板-1_05.jpg" class="image-popup fh5co-board-img"
+                                                title="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, eos?"><img
+                                                    src="./images/logo/ailogohunt00001.svg"
+                                                    alt="Free HTML5 Bootstrap template"></a>
+                                        </div>
+
+                                        <div class="fh5co-desc">Lorem ipsum dolor sit amet, consectetur adipisicing
+                                            elit. Explicabo,
+                                            eos?
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div> -->
+
+        <article class="htmleaf-container" id="htmleaf-container">
+
+            <div class="container wrapper">
+                <div class="clearfix"></div>
+
+                <ul class="thumbnails gridex " style="margin-top: 40px;">
+
+                    <li class="span3">
+                        <a class="thumbnail"> <img alt="270x170" src="./images/logo/ailogohunt00001.svg" /> </a>
+                        <div class="gd-expander">
+                            <div class="gd-inner">
+                                <div class="row-fluid">
+                                    <div class="span6 text-center">
+                                        <img alt="270x170" class="img-polaroid"
+                                            src="./images/logo/ailogohunt00001.svg" />
+                                    </div>
+                                    <div class="span6">
+                                        <h2>Heading text 2</h2>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor
+                                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat.
+                                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                            eu
+                                            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                                            in
+                                            culpa qui officia deserunt mollit anim id est laborum.
+                                        </p>
+                                        <a href="#" class="btn btn-success">Visit Website</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="span3">
+                        <a class="thumbnail"> <img alt="270x170" src="./images/logo/ailogohunt00001.svg" /> </a>
+                        <div class="gd-expander">
+                            <div class="gd-inner">
+                                <div class="row-fluid">
+                                    <div class="span6 text-center">
+                                        <img alt="270x170" class="img-polaroid"
+                                            src="./images/logo/ailogohunt00001.svg" />
+                                    </div>
+                                    <div class="span6">
+                                        <h2>Heading text 2</h2>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor
+                                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat.
+                                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                            eu
+                                            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                                            in
+                                            culpa qui officia deserunt mollit anim id est laborum.
+                                        </p>
+                                        <a href="#" class="btn btn-success">Visit Website</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="span3">
+                        <a class="thumbnail"> <img alt="270x170" src="./images/logo/ailogohunt00001.svg" /> </a>
+                        <div class="gd-expander">
+                            <div class="gd-inner">
+                                <div class="row-fluid">
+                                    <div class="span6 text-center">
+                                        <img alt="270x170" class="img-polaroid"
+                                            src="./images/logo/ailogohunt00001.svg" />
+                                    </div>
+                                    <div class="span6">
+                                        <h2>Heading text 2</h2>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor
+                                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat.
+                                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                            eu
+                                            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                                            in
+                                            culpa qui officia deserunt mollit anim id est laborum.
+                                        </p>
+                                        <a href="#" class="btn btn-success">Visit Website</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="span3">
+                        <a class="thumbnail"> <img alt="270x170" src="./images/logo/ailogohunt00001.svg" /> </a>
+                        <div class="gd-expander">
+                            <div class="gd-inner">
+                                <div class="row-fluid">
+                                    <div class="span6 text-center">
+                                        <img alt="270x170" class="img-polaroid"
+                                            src="./images/logo/ailogohunt00001.svg" />
+                                    </div>
+                                    <div class="span6">
+                                        <h2>Heading text 2</h2>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor
+                                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat.
+                                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                            eu
+                                            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                                            in
+                                            culpa qui officia deserunt mollit anim id est laborum.
+                                        </p>
+                                        <a href="#" class="btn btn-success">Visit Website</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="span3">
+                        <a class="thumbnail"> <img alt="270x170" src="./images/logo/ailogohunt00001.svg" /> </a>
+                        <div class="gd-expander">
+                            <div class="gd-inner">
+                                <div class="row-fluid">
+                                    <div class="span6 text-center">
+                                        <img alt="270x170" class="img-polaroid"
+                                            src="./images/logo/ailogohunt00001.svg" />
+                                    </div>
+                                    <div class="span6">
+                                        <h2>Heading text 2</h2>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor
+                                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat.
+                                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                            eu
+                                            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                                            in
+                                            culpa qui officia deserunt mollit anim id est laborum.
+                                        </p>
+                                        <a href="#" class="btn btn-success">Visit Website</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="span3">
+                        <a class="thumbnail"> <img alt="270x170" src="./images/logo/ailogohunt00001.svg" /> </a>
+                        <div class="gd-expander">
+                            <div class="gd-inner">
+                                <div class="row-fluid">
+                                    <div class="span6 text-center">
+                                        <img alt="270x170" class="img-polaroid"
+                                            src="./images/logo/ailogohunt00001.svg" />
+                                    </div>
+                                    <div class="span6">
+                                        <h2>Heading text 2</h2>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor
+                                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat.
+                                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                            eu
+                                            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                                            in
+                                            culpa qui officia deserunt mollit anim id est laborum.
+                                        </p>
+                                        <a href="#" class="btn btn-success">Visit Website</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+                <div class="push"></div>
+            </div>
+
+        </article>
+
     </div>
-  </div>
-</header>
+    <div class="navbar-fixed-bottom copyright">
 
-<!-- Home Page Post List -->
-<div class="container">
-  <div class="row">
-    <div class="col-lg-10 col-md-10 col-md-offset-1">
-      
-        <div class="post-item-wrapper">
-  <a href="/2019/07/05/hello-world/" class="post-title">
-      吴雨旗的个人博客
-  </a>
-  <div class="post-excerpt">
-    <!-- Post Date and Categories -->
-    <div class="date-and-category">
-      <div class="date">2019-07-05</div>
-      <div class="categories">
-        
-          Uncategorized
-        
-      </div>
+        <div class="row copyrights">
+            <div class="col-xs-6 col-md-4">
+
+            </div>
+            <div class="col-xs-6 col-md-4" style="font-size: 12px;text-align: center;">
+                <a href="#">使用aigohunt必读</a>
+                <span>|</span>
+                <a>成为创作者</a>
+                <span>|</span>
+                <a>侵权举报</a>
+                <span>|</span>
+                <a>联系我们</a>
+                <span>|</span>
+                <a>加入我们</a>
+                <span>|</span>
+                <a>意见反馈</a>
+                <span>|</span>
+            </div>
+            <div class="col-xs-6 col-md-4">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6 col-md-4">
+
+            </div>
+            <div class="col-xs-6 col-md-4" style="text-align: center;font-size: 12px;color: black;">
+                <span>陕ICP备16017121号-3 陕ICP证 160773号</span>
+                <span>© 2019 西安埃古网络科技有限公司 All rights reserves.</span>
+            </div>
+            <div class="col-xs-6 col-md-4">
+
+            </div>
+        </div>
+
     </div>
-    <!-- Post Excerpt -->
-    <div class="excerpt typo">No Post Excerpt</div>
-    <!-- Post Tags -->
-    <div class="tags">
-      
-        <div class="untagged">Untagged</div>
-      
+    <div id="footer">
+
     </div>
-  </div>
-</div>
 
-      
-    </div>
-  </div>
-</div>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
 
-<!-- Pagination -->
-<div class="container">
-  <div class="row">
-    <div class="col-lg-10 col-md-10 col-md-offset-1">
-      <ul class="pagination">
-          
-          
-      </ul>
-    </div>
-  </div>
-</div>
+    <!-- jQuery -->
+    <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+    <!-- jQuery Easing -->
+    <script src="./jquery/瀑布流/js/jquery.easing.1.3.js"></script>
+    <!-- Bootstrap -->
+    <script src="http://www.jq22.com/jquery/bootstrap-3.3.4.js"></script>
+    <!-- Waypoints -->
+    <script src="./jquery/瀑布流/js/jquery.waypoints.min.js"></script>
+    <!-- Magnific Popup -->
+    <script src="./jquery/瀑布流/js/jquery.magnific-popup.min.js"></script>
+    <!-- Salvattore -->
+    <script src="./jquery/瀑布流/js/salvattore.min.js"></script>
+    <!-- Main JS -->
+    <script src="./jquery/瀑布流/js/main.js"></script>
 
+    <script src="./font_jver6jt451/iconfont.js"></script>
 
+    <script>
+        function jump() {
+            //键盘输入导航栏变化
+            document.getElementsByClassName('jumpnext')[0].className += ' navbar-fixed-top searchfixed';
+            document.getElementsByClassName('navtopbar')[0].className += ' topbar';
+            //
+            document.getElementsByClassName('copyright')[0].style.display = "none";
+            document.getElementsByClassName('Divform_Ul')[0].className += ' content';
+            document.getElementsByClassName('main_center')[0].style.display = "none";
+            document.getElementById('htmleaf-container').style.display = 'block'
 
-    <!-- Footer -->
-<footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <p class="copyright text-muted">
-          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
-          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
-        <p class="copyright text-muted">
-          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
-        </p>
-      </div>
-    </div>
-  </div>
-</footer>
+            //判断回车
+            document.onkeydown = function (event) {
 
+                var e = event || window.event || arguments.callee.caller.arguments[0];
+                if (e && e.keyCode == 13) { // enter 键
+                    //要做的事情
+                    window.open("./jquery/瀑布流/index.html")
+                }
+            };
+        }
+        //监听到达底部出现footer
+        $(function () {
+            $(window).scroll(function () {
+                var scrollTop = $(this).scrollTop();
+                var scrollHeight = $(document).height();
+                var windowHeight = $(this).height();
 
-    <!-- After Footer Scripts -->
-<script src="/js/highlight.pack.js"></script>
-<script>
-  document.addEventListener("DOMContentLoaded", function(event) {
-    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
-    codeBlocks.forEach(function(block, index) {
-      hljs.highlightBlock(block);
-    });
-  });
-</script>
+                if (scrollTop + windowHeight == scrollHeight) {
+                    document.getElementById('footer').style.display = 'block'
+                }
+            })
+        })
+    </script>
 
-  </body>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/bootstrap-gridex.min.js"></script>
+
+    <script>
+        $(function () {
+            $('.gridex').gridex();
+        })
+    </script>
+
+    <!-- <button style="color: white;background:black;width: 93px;height: 48px;border-radius: 24px;border: none;">开始吧</button> -->
+</body>
+
 </html>
-
