@@ -11,33 +11,47 @@
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./font/font_colyq0z9y0a/iconfont.css">
     <link rel="stylesheet" href="./font/font_jver6jt451/iconfont.css">
+    <style>
+        .keydown_none {
+            display: none !important;
+        }
+
+        .keydown_nonerec {
+            display: inherit !important;
+        }
+
+        .jumpnextborder{
+            border-bottom: 1px solid #aaa;
+        }
+    </style>
 </head>
 
 <body>
     <div class="container-fluid">
-        <div class="d-flex justify-content-between">
+        <div class="d-flex justify-content-between shadow-lg p-3 mb-5 bg-white rounded keydown_up">
             <div class="float-left btn">
-                <a href="">
+                <a href="#">
                     <i class="iconfont icon-iconfontzhizuobiaozhun0247"></i>
                 </a>
-                <a href="">
+                <a href="#">
                     <strong style="font-size: 22px;">AIGOHUNT</strong>
                 </a>
-                <a href="" style="font-size: 14px;">
+                <a href="#" style="font-size: 14px;">
                     为什么选择AIGOHUNT？
                 </a>
             </div>
             <div class="float-right btn" style="vertical-align: middle;">
-                <a href="">
+                <a href="#" onclick="message()">
                     <i class="iconfont icon-xiaoxi"></i>
                 </a>
+
                 <a href="./login.html">
                     <i class="iconfont icon-wode"></i>
                 </a>
             </div>
         </div>
 
-        <div class="d-flex bd-highlight">
+        <div class="d-flex bd-highlight keydown_up">
             <div class="d-flex bd-highlight">
                 <div class="p-2 flex-fill bd-highlight"></div>
                 <div class="p-2 flex-fill bd-highlight">
@@ -53,10 +67,11 @@
                             </ul>
 
                             <div class="input-group jumpnext">
-                                <input name='wd' size="40" autofocus="autofocus" onkeydown="jump()"
+                                <input name="wd" size="40" autofocus="autofocus" onkeydown="jump()"
                                     style="height: 56px;font-size: 26px;" type="text" class="cinput form-control"
                                     placeholder="试试免费HUNT“消防”">
-                                <div class="input-group-addon inputsearch" style="background-color: #fff;border:none;">
+                                <div class="input-group-addon inputsearch"
+                                    style="background-color: #fff;border:none;margin-left: 4px;line-height: 56px;margin-top: 5px;margin-right: 6px;">
                                     <a href="./404/404.html" style="text-decoration: none;">
                                         <i class="iconfont icon-sousuo"
                                             style="color: #B3B3B3;font-weight: bolder;font-size: 24px;"></i>
@@ -141,7 +156,7 @@
             </div>
         </div>
 
-        <div class="fixed-bottom">
+        <div class="fixed-bottom keydown_up">
             <div class="d-flex justify-content-center">
                 <div class="d-flex flex-column bd-highlight mb-3">
                     <div class="p-2 bd-highlight font-bottom">
@@ -164,36 +179,60 @@
                 </div>
             </div>
         </div>
+
+
+        <div class="d-flex justify-content-center shadow-lg p-3 mb-5 bg-white rounded keydown_none">
+            <div class="d-flex bd-highlight">
+                <div class="p-2 w-100 bd-highlight">
+                    <div class="input-group jumpnext" id="jumpfocus">
+                        <input id='wd' size="40" autofocus="autofocus" onkeydown="jump()"
+                            style="height: 56px;font-size: 26px;" type="text" class="cinput form-control"
+                            placeholder="试试免费HUNT“消防”">
+                    </div>
+                </div>
+                <div class="p-2 flex-shrink-1 bd-highlight">
+                    <div class="input-group-addon inputsearch"
+                        style="background-color: #fff;border:none;margin-left: 4px;line-height: 56px;margin-top: 5px;margin-right: 6px;">
+                        <a href="./404/404.html" style="text-decoration: none;">
+                            <i class="iconfont icon-sousuo"
+                                style="color: #B3B3B3;font-weight: bolder;font-size: 24px;"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </body>
 <script>
     function jump() {
-        //键盘输入导航栏变化
-        document.getElementsByClassName('jumpnext')[0].className += ' navbar-fixed-top searchfixed';
-        document.getElementsByClassName('main_center')[0].style.display = "none";
-
+        // //键盘输入导航栏变化
+        // document.getElementsByClassName('jumpnext')[0].className += ' searchfixed';
+        // document.getElementsByClassName('main_center')[0].style.display = "none";
+        let oKey = document.getElementsByClassName('keydown_up');
+        let oKeyUp = document.getElementsByClassName('keydown_none')[0];
+        
+        for (let k = 0; k < oKey.length; k++) {
+            oKey[k].className += ' keydown_none';
+            oKeyUp.className += 'rec';
+            let oWd = document.getElementById('wd').focus();
+            let JumpFocus = document.getElementById('jumpfocus');
+        }
         //判断回车
         document.onkeydown = function (event) {
-
-            var e = event || window.event || arguments.callee.caller.arguments[0];
-            if (e && e.keyCode == 13) { // enter 键
-                //要做的事情
+            var ev = (typeof event != 'undefined') ? window.event : event;
+            if (ev.keyCode == 13) {
                 window.open("./404/404.html")
             }
-        };
+        }
     }
-    //监听到达底部出现footer
-    $(function () {
-        $(window).scroll(function () {
-            var scrollTop = $(this).scrollTop();
-            var scrollHeight = $(document).height();
-            var windowHeight = $(this).height();
 
-            if (scrollTop + windowHeight == scrollHeight) {
-                document.getElementById('footer').style.display = 'block'
-            }
-        })
-    })
+    function message() {
+        alert("目前暂未开放通知栏目");
+    }
+
+    // document.getElementById("jump").classList.remove("jumpnext");
+    // document.getElementById("add_border").classList.add("jumpnext");
 </script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">

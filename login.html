@@ -45,10 +45,13 @@
 </head>
 
 <body>
-	<section class="signin popup-in">
+	<section class="signin popup-in ">
 		<div class="container">
-
+			<button type="button" onclick="GoBack()" class="close" aria-label="关闭" style="position: fixed;top: 0;right:10px;">
+				<span aria-hidden="true">&times;</span>
+			</button>
 			<div class="sign-content popup-in-content">
+
 				<div class="popup-in-txt">
 					<h2 style="float: left;color:black;">欢迎回来，朋友</h2>
 					<h4 style="float: right;vertical-align: bottom"><a href="" style="color:black;">使用密码登录</a></h4>
@@ -87,8 +90,9 @@
 					<div class="row">
 						<div class="col-sm-12">
 							<div class="signin-footer">
-								<button type="button" class="btn signin_btn" style="background: #29aae3" onclick="login();">注册/登录</button>
-								
+								<button type="button" class="btn signin_btn" style="background: #29aae3"
+									onclick="login();">注册/登录</button>
+
 							</div>
 							<p
 								style="margin-top: 20px;background: #f2f2f2;font-size: 12px;color: black;padding: 5px 10px;border-radius: 6px;">
@@ -171,11 +175,37 @@
 
 
 
-		function login(){
+		function login() {
 			alert("请输入账号和密码");
 		}
 
-
+		function GoBack() {
+			if ((navigator.userAgent.indexOf('MSIE') >= 0) && (navigator.userAgent.indexOf('Opera') < 0)) { // IE
+				if (history.length > 0) {
+					window.history.go(-1);
+				} else {
+					window.location.href = './index.html';
+				}
+			} else { //非IE浏览器
+				if (navigator.userAgent.indexOf('Firefox') >= 0 ||
+					navigator.userAgent.indexOf('Opera') >= 0 ||
+					navigator.userAgent.indexOf('Safari') >= 0 ||
+					navigator.userAgent.indexOf('Chrome') >= 0 ||
+					navigator.userAgent.indexOf('WebKit') >= 0) {
+					if (window.history.length > 2) {
+						window.history.go(-1);
+					} else {
+						window.location.href = './index.html';
+					}
+				} else { //未知的浏览器
+					if (history.length > 1) {
+						window.history.go(-1);
+					} else {
+						window.location.href = './index.html';
+					}
+				}
+			}
+		}
 	</script>
 	<script src="./js/jquery.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>

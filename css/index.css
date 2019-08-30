@@ -228,7 +228,7 @@ input:-ms-input-placeholder {
 .main-content {
     margin-top: 40px;
 }
-
+/* 
 a:focus {
     outline: none;
 }
@@ -250,3 +250,9 @@ x .wrapper {
 .span3 img{
     width: 265px;
 }
+ */
+
+
+ .p-2{
+     padding: 0!important;
+ }
