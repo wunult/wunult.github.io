@@ -22,23 +22,24 @@
 
 	<style type="text/css">
 		.icon {
-			width: 24px;
-			height: 24px;
-			line-height: 24px;
+			width: 28px;
+			height: 28px;
+			line-height: 28px;
 			vertical-align: -0.15em;
 			fill: currentColor;
 			overflow: hidden;
+			margin-left: 10px;
 		}
 
 		.icon-logo {
-			height: 24px;
-			line-height: 24px;
+			height: 28px;
+			line-height: 28px;
 		}
 
 		.icon-logo p {
 			display: inline-block;
-			line-height: 24px;
-			height: 24px;
+			line-height: 28px;
+			height: 28px;
 		}
 	</style>
 </head>
@@ -66,7 +67,7 @@
 										<div class="row">
 											<div class="col-xs-12 col-sm-6 col-md-8">
 												<input type="password" class="form-control" id="signin_form"
-													placeholder="请输入短信验证码" onclick="login()">
+													placeholder="请输入短信验证码">
 											</div>
 											<div class="col-xs-6 col-md-4">
 												<input class="btn  btn-primary"
@@ -86,7 +87,7 @@
 					<div class="row">
 						<div class="col-sm-12">
 							<div class="signin-footer">
-								<button type="button" class="btn signin_btn" style="background: #29aae3">注册/登录</button>
+								<button type="button" class="btn signin_btn" style="background: #29aae3" onclick="login();">注册/登录</button>
 								
 							</div>
 							<p
@@ -119,11 +120,11 @@
 														<svg class="icon" aria-hidden="true">
 															<use xlink:href="#icon-weixin"></use>
 														</svg>
-														<p>微信</p>
+														<!-- <p>微信</p> -->
 														<svg class="icon" aria-hidden="true">
 															<use xlink:href="#icon-QQ"></use>
 														</svg>
-														<p>QQ</p>
+														<!-- <p>QQ</p> -->
 													</div>
 												</div>
 											</div>
@@ -167,9 +168,14 @@
 				settime(val);
 			}, 1000);
 		}
+
+
+
 		function login(){
-			alert("请输入账号和密码")
+			alert("请输入账号和密码");
 		}
+
+
 	</script>
 	<script src="./js/jquery.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>

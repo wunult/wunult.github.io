@@ -287,7 +287,8 @@ html,body{
 .signin.popup-in {padding: 170px 0;}
 .signin.signup.popup-up {padding: 48px 0;}
 .signin.popup-in,.signin.signup.popup-up{
-    background: url(../images/popupsignin.png)no-repeat;
+    /* background: url(../images/popupsignin.png)no-repeat; */
+    background: #4c4c4c;
     background-size: cover;
     background-position: center;
     z-index: 1;
