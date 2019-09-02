@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./font/font_colyq0z9y0a/iconfont.css">
     <link rel="stylesheet" href="./font/font_jver6jt451/iconfont.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/contentstyle.css">
+    <script src="js/modernizr.js"></script>
     <style>
         .keydown_none {
             display: none !important;
@@ -20,16 +23,17 @@
             display: inherit !important;
         }
 
-        .jumpnextborder{
-            border-bottom: 1px solid #aaa;
+        .itemss {
+            display: none;
         }
     </style>
 </head>
 
 <body>
     <div class="container-fluid">
-        <div class="d-flex justify-content-between shadow-lg p-3 mb-5 bg-white rounded keydown_up">
-            <div class="float-left btn">
+        <!-- 首页导航栏 -->
+        <div class="bg-info clearfix shadow-lg p-3 mb-5 bg-white rounded keydown_up">
+            <div class="float-left btn" style="vertical-align: inherit;">
                 <a href="#">
                     <i class="iconfont icon-iconfontzhizuobiaozhun0247"></i>
                 </a>
@@ -40,9 +44,9 @@
                     为什么选择AIGOHUNT？
                 </a>
             </div>
-            <div class="float-right btn" style="vertical-align: middle;">
-                <a href="#" onclick="message()">
-                    <i class="iconfont icon-xiaoxi"></i>
+            <div class="float-right btn" style="vertical-align: inherit;>
+                <a href=" #" onclick="message()">
+                <i class="iconfont icon-xiaoxi"></i>
                 </a>
 
                 <a href="./login.html">
@@ -50,7 +54,7 @@
                 </a>
             </div>
         </div>
-
+        <!-- 首页搜索 -->
         <div class="d-flex bd-highlight keydown_up">
             <div class="d-flex bd-highlight">
                 <div class="p-2 flex-fill bd-highlight"></div>
@@ -156,6 +160,7 @@
             </div>
         </div>
 
+        <!-- 首页底部 -->
         <div class="fixed-bottom keydown_up">
             <div class="d-flex justify-content-center">
                 <div class="d-flex flex-column bd-highlight mb-3">
@@ -180,30 +185,390 @@
             </div>
         </div>
 
+        <!-- 搜索框输入之后 -->
+        <div>
+            <div class="d-flex justify-content-center shadow-lg p-3 mb-5 bg-white rounded keydown_none">
 
-        <div class="d-flex justify-content-center shadow-lg p-3 mb-5 bg-white rounded keydown_none">
-            <div class="d-flex bd-highlight">
-                <div class="p-2 w-100 bd-highlight">
-                    <div class="input-group jumpnext" id="jumpfocus">
-                        <input id='wd' size="40" autofocus="autofocus" onkeydown="jump()"
-                            style="height: 56px;font-size: 26px;" type="text" class="cinput form-control"
-                            placeholder="试试免费HUNT“消防”">
+                <div class="d-flex bd-highlight jumpnext" id="jumpfocus">
+                    <div class="p-2 w-100 bd-highlight">
+                        <div class="input-group">
+                            <input id='wd' size="40" autofocus="autofocus" onkeydown="jump()"
+                                style="height: 56px;font-size: 26px;" type="text" class="cinput form-control"
+                                placeholder="试试免费HUNT“消防”">
+                        </div>
+                    </div>
+                    <div class="p-2 flex-shrink-1 bd-highlight">
+                        <div class="input-group-addon inputsearch"
+                            style="background-color: #fff;border:none;margin-left: 4px;line-height: 56px;margin-top: 5px;margin-right: 6px;">
+                            <a href="./404/404.html" style="text-decoration: none;">
+                                <i class="iconfont icon-sousuo"
+                                    style="color: #B3B3B3;font-weight: bolder;font-size: 24px;"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="p-2 flex-shrink-1 bd-highlight">
-                    <div class="input-group-addon inputsearch"
-                        style="background-color: #fff;border:none;margin-left: 4px;line-height: 56px;margin-top: 5px;margin-right: 6px;">
-                        <a href="./404/404.html" style="text-decoration: none;">
-                            <i class="iconfont icon-sousuo"
-                                style="color: #B3B3B3;font-weight: bolder;font-size: 24px;"></i>
-                        </a>
+
+            </div>
+            <!-- 点击搜索之后弹出框 -->
+            <div class="itemss">
+                <ul class="cd-items cd-container">
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00001.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00002.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00003.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00004.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00005.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00006.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+
+                </ul>
+                <ul class="cd-items cd-container">
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00007.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00008.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00009.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00010.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00011.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00012.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+
+                </ul>
+                <ul class="cd-items cd-container">
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00013.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00014.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00015.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00016.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00017.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00018.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+
+                </ul>
+                <ul class="cd-items cd-container">
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00019.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00020.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00021.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00022.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00023.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00024.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+
+                </ul>
+                <ul class="cd-items cd-container">
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00025.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00026.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00027.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00028.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00029.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00030.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+
+                </ul>
+                <ul class="cd-items cd-container">
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00031.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00032.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00033.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00034.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00035.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00036.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+
+                </ul>
+                <ul class="cd-items cd-container">
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00037.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00038.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00039.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00040.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00041.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00042.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+
+                </ul>
+                <ul class="cd-items cd-container">
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00043.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00044.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00045.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00046.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00047.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00048.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+
+                </ul>
+                <ul class="cd-items cd-container">
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00049.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00050.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00051.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00052.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00053.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00054.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+
+                </ul>
+                <ul class="cd-items cd-container">
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00055.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00056.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00057.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00058.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00059.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00060.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+
+                </ul>
+                <ul class="cd-items cd-container">
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00061.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00062.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00063.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00064.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00065.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00066.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+
+                </ul>
+                <ul class="cd-items cd-container">
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00067.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00068.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00069.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00070.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00071.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+                    <li class="cd-item">
+                        <img src="./images/logo/ailogohunt00072.svg" alt="Item Preview">
+                        <a href="#0" class="cd-trigger"></a>
+                    </li>
+
+                </ul>
+                <!-- 弹出框 -->
+                <div class="cd-quick-view">
+                    <div class="cd-slider-wrapper">
+                        <ul class="cd-slider">
+                            <li class="selected">
+                                <img id="info-img" src="./images/logo/ailogohunt00007.svg" alt="Product 1">
+                            </li>
+                        </ul>
+
+                        <ul class="cd-slider-navigation">
+
+                        </ul>
                     </div>
+
+                    <div class="cd-item-info">
+                        <h2>图片标题</h2>
+                        <p>
+                            图片信息<br>
+                            图片信息<br>
+                            图片信息
+                        </p>
+
+                        <ul class="cd-item-action">
+                            <li><button class="add-to-cart">下载图片</button></li>
+                            <li><a href="#0">无法下载？</a></li>
+                        </ul>
+                    </div>
+                    <a href="#0" class="cd-close">关闭</a>
                 </div>
             </div>
         </div>
-
     </div>
 </body>
+<script src="js/jquery.min.js"></script>
 <script>
     function jump() {
         // //键盘输入导航栏变化
@@ -211,40 +576,63 @@
         // document.getElementsByClassName('main_center')[0].style.display = "none";
         let oKey = document.getElementsByClassName('keydown_up');
         let oKeyUp = document.getElementsByClassName('keydown_none')[0];
-        
+        let oItems = document.getElementsByClassName('itemss')[0];
+
+
+
         for (let k = 0; k < oKey.length; k++) {
             oKey[k].className += ' keydown_none';
             oKeyUp.className += 'rec';
+
             let oWd = document.getElementById('wd').focus();
             let JumpFocus = document.getElementById('jumpfocus');
+            JumpFocus.className += " jumpnextborder";
         }
+        oItems.style.display = "block";
         //判断回车
         document.onkeydown = function (event) {
-            var ev = (typeof event != 'undefined') ? window.event : event;
-            if (ev.keyCode == 13) {
+
+            var e = event || window.event || arguments.callee.caller.arguments[0];
+            if (e && e.keyCode == 13) { // enter 键
+                //要做的事情
                 window.open("./404/404.html")
             }
-        }
+        };
     }
 
     function message() {
         alert("目前暂未开放通知栏目");
     }
+</script>
 
-    // document.getElementById("jump").classList.remove("jumpnext");
-    // document.getElementById("add_border").classList.add("jumpnext");
+<script>
+    $(document).ready(function () {
+        $('.cd-item').click(function () {
+            let src = $(this).find('img').attr('src')
+            $('#info-img').attr("src", src);
+        });
+
+    });
 </script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
 </script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
 </script>
+
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
 </script>
 
 <script src="./font/font_jver6jt451/iconfont.js"></script>
+
+
+
+<script src="js/velocity.min.js"></script>
+
+<script src="js/main.js"></script>
 
 
 </html>
